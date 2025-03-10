@@ -40,6 +40,16 @@ WSGI= Webserver Gateway interface it acts as a bridge between websersers and web
 
 
 
+flask installlations
+
+
+py -m venv env
+ls ( u can see env)
+env\Scripts\activate.bat   (activate the env)
+.\env\Scripts\activate
+
+pip install flask
+py --version 
 
 
 
@@ -58,3 +68,17 @@ pip freeze requirement.txt
 pip install -r requirement.txt
 
 
+mysql connector
+
+pip install mysql-connector-python
+
+import mysql.connector
+
+
+app=Flask(__name__,template_folder='templates')
+con=mysql.connector.connect(
+      host='localhost',
+      user='root',
+      password='yourpassword',
+      database='database_name',
+)
