@@ -1,0 +1,60 @@
+
+
+
+Python is a open source platform
+
+Python Frameworks
+
+Flask
+Django
+FastAPI
+
+
+
+Flask is a lightweight , opensource, customized framework 
+
+What is the use of flask 
+
+    Using flask we can build web applications 
+
+To install Flask
+
+Py -m venv env 
+
+why do we need venv 
+
+Imagine a scenario where you are working on two web-based Python projects one of them uses Django 4.0 and the other uses Django 4.1 (check for the latest Django versions and so on). In such situations, we need to create a virtual environment in Python that can be really useful to maintain the dependencies of both projects.
+
+In flask we have general terms 
+
+1.WSGI
+2.Werkzeug
+3.jinja2
+
+WSGI= Webserver Gateway interface it acts as a bridge between websersers and web application . It accepts HTTP methods(request) and gives response
+
+ A web server (like Nginx, Apache, or Gunicorn) is responsible for accepting incoming HTTP requests from clients (e.g., web browsers).
+
+ Flask: Flask is designed to be a WSGI-compatible framework. When you run a Flask app in production, it is typically run with a WSGI server like Gunicorn or uWSGI.
+
+
+
+
+
+
+
+
+Git commands
+
+Git add .
+GIt commit -m "changes"
+Git push 
+
+
+Terminal commands for Requirement.txt
+
+pip list 
+pip freeze requirement.txt
+pip install -r requirement.txt
+
+
