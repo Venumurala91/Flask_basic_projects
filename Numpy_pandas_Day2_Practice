@@ -1,0 +1,840 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMQ1Ezi52yUJkJ3ZdySmmO5"
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 17,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RWlU7ROtFEkc",
+        "outputId": "4563eb13-1da3-4c66-dc21-769c0e2bc3fc"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[ 1  2  3  4  5]\n",
+            " [ 6  7  8  9 10]\n",
+            " [11 12 13 14 15]\n",
+            " [16 17 18 19 20]\n",
+            " [21 22 23 24 25]]\n",
+            "-------------------\n",
+            "(5, 5)\n",
+            "-------------------\n",
+            "2\n",
+            "-------------------\n",
+            "int64\n",
+            "-------------------\n",
+            "25\n",
+            "-------------------\n",
+            "8\n",
+            "-------------------\n",
+            "200\n",
+            "-------------------\n",
+            "[[ 6  7  8  9 10]]\n",
+            "[[12 13 14]\n",
+            " [17 18 19]]\n",
+            "-------------------\n",
+            "[[19 20]\n",
+            " [24 25]]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "\n",
+        "# Basic operations\n",
+        "# 2D dimensional Array\n",
+        "df=np.arange(1,26).reshape(5,5)\n",
+        "print(df)\n",
+        "print('-------------------')\n",
+        "print(df.shape)\n",
+        "print('-------------------')\n",
+        "print(df.ndim)\n",
+        "print('-------------------')\n",
+        "print(df.dtype)\n",
+        "print('-------------------')\n",
+        "print(df.size)\n",
+        "print('-------------------')\n",
+        "print(df.itemsize)\n",
+        "print('-------------------')\n",
+        "print(df.nbytes)\n",
+        "print('-------------------')\n",
+        "\n",
+        "#slicing\n",
+        "\n",
+        "\n",
+        "print(df[1:2])\n",
+        "\n",
+        "print(df[2:4,1:4])\n",
+        "\n",
+        "print('-------------------')\n",
+        "\n",
+        "\n",
+        "print(df[3:5,3:5])\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "import numpy as np\n",
+        "\n",
+        "#3D Dimentional\n",
+        "\n",
+        "df=np.arange(1,65).reshape(4,4,4)\n",
+        "\n",
+        "print(df)\n",
+        "\n",
+        "# print('\\n**************************************')\n",
+        "\n",
+        "# print(df.shape)\n",
+        "\n",
+        "# print('\\n**************************************')\n",
+        "\n",
+        "# print(df.ndim)\n",
+        "\n",
+        "# print('\\n**************************************')\n",
+        "\n",
+        "# print(df.sum())\n",
+        "\n",
+        "# print('\\n**************************************')\n",
+        "\n",
+        "# print(df.sum(axis=0))\n",
+        "\n",
+        "# print('\\n**************************************')\n",
+        "\n",
+        "# print(df.sum(axis=1))\n",
+        "\n",
+        "# print('\\n**************************************')\n",
+        "\n",
+        "# print(df.sum(axis=2))\n",
+        "\n",
+        "#Slicing\n",
+        "print(df[0:3,1:3,1:3])\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "N_uAzv-mFWiN",
+        "outputId": "1961aac1-7c7a-474b-e28a-c335a41e55fe"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[[ 1  2  3  4]\n",
+            "  [ 5  6  7  8]\n",
+            "  [ 9 10 11 12]\n",
+            "  [13 14 15 16]]\n",
+            "\n",
+            " [[17 18 19 20]\n",
+            "  [21 22 23 24]\n",
+            "  [25 26 27 28]\n",
+            "  [29 30 31 32]]\n",
+            "\n",
+            " [[33 34 35 36]\n",
+            "  [37 38 39 40]\n",
+            "  [41 42 43 44]\n",
+            "  [45 46 47 48]]\n",
+            "\n",
+            " [[49 50 51 52]\n",
+            "  [53 54 55 56]\n",
+            "  [57 58 59 60]\n",
+            "  [61 62 63 64]]]\n",
+            "[[[ 6  7]\n",
+            "  [10 11]]\n",
+            "\n",
+            " [[22 23]\n",
+            "  [26 27]]\n",
+            "\n",
+            " [[38 39]\n",
+            "  [42 43]]]\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<module 'numpy' from '/usr/local/lib/python3.11/dist-packages/numpy/__init__.py'>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 32
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df=np.zeros(2)\n",
+        "print(df)\n",
+        "a = np.array([1, 2, 3, 4])\n",
+        "b = np.array([5, 6, 7, 8])\n",
+        "\n",
+        "df=np.concatenate((a, b))\n",
+        "print(df)\n",
+        "data = np.array([[1, 2], [3, 4]])\n",
+        "ones = np.array([[1, 1], [1, 1]])\n",
+        "\n",
+        "print(data + ones)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Nn0EVKxhNwXF",
+        "outputId": "758501b0-687d-48c6-ba5b-f80935a6a02c"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0. 0.]\n",
+            "[1 2 3 4 5 6 7 8]\n",
+            "[[2 3]\n",
+            " [4 5]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# import pandas as pd\n",
+        "\n",
+        "\n",
+        "df=pd.DataFrame()\n",
+        "df\n",
+        "\n",
+        "\n",
+        "import pandas as pd\n",
+        "\n",
+        "lst = ['Geeks', 'For', 'Geeks', 'is',\n",
+        "            'portal', 'for', 'Geeks']\n",
+        "columns=['1','2','3','4','5','6','7']\n",
+        "\n",
+        "df = pd.DataFrame(lst,columns)\n",
+        "print(df)\n",
+        "\n",
+        "\n",
+        "# import pandas as pd\n",
+        "import pandas as pd\n",
+        "\n",
+        "# simple array\n",
+        "data = [1, 2, 3, 4]\n",
+        "\n",
+        "ser = pd.Series(data)\n",
+        "print(ser)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nVJhr6-lVvp1",
+        "outputId": "413bf385-576b-49c2-9997-77aa8e5f3c6a"
+      },
+      "execution_count": 50,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "        0\n",
+            "1   Geeks\n",
+            "2     For\n",
+            "3   Geeks\n",
+            "4      is\n",
+            "5  portal\n",
+            "6     for\n",
+            "7   Geeks\n",
+            "0    1\n",
+            "1    2\n",
+            "2    3\n",
+            "3    4\n",
+            "dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 383
+        },
+        "id": "nvgy-jnYcjoc",
+        "outputId": "2d3833df-4d4a-4206-831d-bf124b300e08"
+      },
+      "execution_count": 88,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "ModuleNotFoundError",
+          "evalue": "No module named 'faker'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-88-fe211bf3e7bd>\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mpandas\u001b[0m \u001b[0;32mas\u001b[0m \u001b[0mpd\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mrandom\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0;32mfrom\u001b[0m \u001b[0mfaker\u001b[0m \u001b[0;32mimport\u001b[0m \u001b[0mFaker\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      4\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;31m# Initialize the Faker library to generate random names and data\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mModuleNotFoundError\u001b[0m: No module named 'faker'",
+            "",
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0;32m\nNOTE: If your import is failing due to a missing package, you can\nmanually install dependencies using either !pip or !apt.\n\nTo view examples of installing some common dependencies, click the\n\"Open Examples\" button below.\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\n"
+          ],
+          "errorDetails": {
+            "actions": [
+              {
+                "action": "open_url",
+                "actionText": "Open Examples",
+                "url": "/notebooks/snippets/importing_libraries.ipynb"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pip install Faker"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ALGZSXl5cnkq",
+        "outputId": "3fabe9ef-ba56-4c98-c49d-5b00d167b8c8"
+      },
+      "execution_count": 91,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Requirement already satisfied: Faker in /usr/local/lib/python3.11/dist-packages (37.1.0)\n",
+            "Requirement already satisfied: tzdata in /usr/local/lib/python3.11/dist-packages (from Faker) (2025.1)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import random\n",
+        "from faker import Faker\n",
+        "\n",
+        "# Initialize the Faker library to generate random names and data\n",
+        "fake = Faker()\n",
+        "\n",
+        "# Define the number of records (200 records)\n",
+        "num_records = 200\n",
+        "\n",
+        "# Generate the employee data\n",
+        "data = {\n",
+        "    'Employee ID': [i+101 for i in range(num_records)],  # Employee ID starting from 101\n",
+        "    'Name': [fake.name() for _ in range(num_records)],  # Random names\n",
+        "    'Department': [random.choice(['HR', 'Marketing', 'IT', 'Finance', 'Sales', 'Operations']) for _ in range(num_records)],\n",
+        "    'Position': [random.choice(['Manager', 'Executive', 'Developer', 'Analyst', 'Sales Representative']) for _ in range(num_records)],\n",
+        "    'Salary': [random.randint(50000, 120000) for _ in range(num_records)],  # Random salary between 50K and 120K\n",
+        "    'Joining Date': [fake.date_this_decade() for _ in range(num_records)]  # Random joining date in the past decade\n",
+        "}\n",
+        "\n",
+        "# Create the DataFrame\n",
+        "df = pd.DataFrame(data)\n",
+        "\n",
+        "# Save the DataFrame to an Excel file\n",
+        "df.to_excel('employee_data_200_records.xlsx', index=False, engine='openpyxl')\n",
+        "\n",
+        "print(f\"Excel file 'employee_data_200_records.xlsx' has been created with {num_records} records.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VQrwjlKacuqK",
+        "outputId": "dd1c7f66-c75e-4035-d527-390ee775fcbc"
+      },
+      "execution_count": 92,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Excel file 'employee_data_200_records.xlsx' has been created with 200 records.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd"
+      ],
+      "metadata": {
+        "id": "JPpLrh8ec8yl"
+      },
+      "execution_count": 93,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "df=pd.read_excel('employee_data_200_records.xlsx')\n",
+        "df\n",
+        "# print(df.head())\n",
+        "# print(df.columns)\n",
+        "# c=[]\n",
+        "# extract_names=df[df['Salary']>100000]\n",
+        "\n",
+        "\n",
+        "# d = extract_names[['Name', 'Salary']]\n",
+        "# # print(d)\n",
+        "\n",
+        "# print(d.head())\n",
+        "\n",
+        "# df['Name'] = df['Name'].str.lower()\n",
+        "# print(df.head())\n",
+        "\n",
+        "# df=df[['Name','Department']]\n",
+        "# print(df.head())\n",
+        "\n",
+        "\n",
+        "# d=df.loc(df.Department=='IT')\n",
+        "# print(d.head())\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YQAdCJz9c-Xn",
+        "outputId": "c5129568-646c-4e0e-ebd1-05c3b8793dac"
+      },
+      "execution_count": 134,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<bound method DataFrame.count of      Employee ID                 Name Department              Position  \\\n",
+            "1            102        Peter Higgins         IT               Manager   \n",
+            "3            104          Bill Carter         IT               Analyst   \n",
+            "13           114        Kristy Howell         IT  Sales Representative   \n",
+            "14           115          Keith Mills         IT               Analyst   \n",
+            "20           121         Connie Scott         IT             Developer   \n",
+            "36           137        Sandra Henson         IT  Sales Representative   \n",
+            "38           139      Aaron Stevenson         IT  Sales Representative   \n",
+            "44           145         Walter Jones         IT               Analyst   \n",
+            "55           156          Amy Russell         IT               Analyst   \n",
+            "56           157           Nancy Bell         IT               Analyst   \n",
+            "60           161    Shannon Hernandez         IT  Sales Representative   \n",
+            "61           162      Nancy Armstrong         IT               Manager   \n",
+            "68           169         Sarah Powell         IT             Developer   \n",
+            "69           170    Marcia Richardson         IT             Executive   \n",
+            "71           172       Monica Nichols         IT             Executive   \n",
+            "74           175       Courtney Salas         IT               Manager   \n",
+            "76           177        Nathan Ibarra         IT             Executive   \n",
+            "77           178  Dr. Christian Potts         IT             Executive   \n",
+            "84           185       Kristine Scott         IT               Analyst   \n",
+            "85           186          Adam Graves         IT  Sales Representative   \n",
+            "94           195         Peter Dorsey         IT               Manager   \n",
+            "101          202       Angela Ramirez         IT             Developer   \n",
+            "103          204         Kevin Walker         IT  Sales Representative   \n",
+            "113          214          Mike Wilson         IT               Manager   \n",
+            "117          218        Erin Williams         IT               Analyst   \n",
+            "121          222           Brent Chan         IT               Analyst   \n",
+            "123          224         James Bailey         IT             Developer   \n",
+            "124          225         Robin Martin         IT  Sales Representative   \n",
+            "129          230          Jason Watts         IT             Developer   \n",
+            "131          232     Heather Calderon         IT             Developer   \n",
+            "133          234         Anthony King         IT               Manager   \n",
+            "134          235        Kelly Johnson         IT               Manager   \n",
+            "135          236        Robert Hansen         IT             Executive   \n",
+            "139          240          Grace Gomez         IT               Manager   \n",
+            "140          241        Daniel Mosley         IT  Sales Representative   \n",
+            "142          243        Brenda Atkins         IT               Manager   \n",
+            "149          250       Richard Phelps         IT               Analyst   \n",
+            "152          253          Nancy Grant         IT  Sales Representative   \n",
+            "164          265       Douglas Cooper         IT               Analyst   \n",
+            "168          269          Brandi Rose         IT             Developer   \n",
+            "174          275    Stephanie Bennett         IT               Analyst   \n",
+            "177          278    Michelle Crawford         IT               Manager   \n",
+            "179          280        Gerald Martin         IT             Executive   \n",
+            "188          289      Joshua Gallegos         IT  Sales Representative   \n",
+            "192          293           Emma White         IT               Analyst   \n",
+            "\n",
+            "     Salary Joining Date  \n",
+            "1     79660   2025-03-10  \n",
+            "3     53009   2021-06-13  \n",
+            "13   108656   2025-01-05  \n",
+            "14    62049   2023-03-08  \n",
+            "20   105205   2024-05-01  \n",
+            "36    57754   2024-08-12  \n",
+            "38    88771   2022-11-09  \n",
+            "44    53920   2020-06-14  \n",
+            "55    69040   2021-04-29  \n",
+            "56   106278   2023-11-24  \n",
+            "60   100405   2023-10-04  \n",
+            "61   116336   2024-12-25  \n",
+            "68    82606   2022-07-22  \n",
+            "69    51266   2020-01-23  \n",
+            "71    61620   2020-03-05  \n",
+            "74    72748   2025-02-01  \n",
+            "76   108830   2023-12-20  \n",
+            "77    79551   2020-06-29  \n",
+            "84    86761   2024-07-02  \n",
+            "85    68974   2020-02-20  \n",
+            "94    88295   2021-05-30  \n",
+            "101   70378   2021-11-01  \n",
+            "103   79539   2023-01-28  \n",
+            "113  108670   2024-08-09  \n",
+            "117   58044   2024-06-08  \n",
+            "121   95706   2021-10-12  \n",
+            "123   81978   2021-02-03  \n",
+            "124   71635   2024-02-26  \n",
+            "129  103928   2020-08-09  \n",
+            "131   66467   2021-10-02  \n",
+            "133  100028   2023-02-28  \n",
+            "134   79171   2021-03-08  \n",
+            "135   68667   2023-03-08  \n",
+            "139   75471   2020-01-15  \n",
+            "140   66241   2021-07-10  \n",
+            "142   52281   2025-01-03  \n",
+            "149   80393   2021-11-22  \n",
+            "152  119841   2025-03-03  \n",
+            "164  102037   2024-04-20  \n",
+            "168   90376   2021-01-09  \n",
+            "174   51622   2024-12-15  \n",
+            "177  119128   2020-08-06  \n",
+            "179  109234   2020-06-06  \n",
+            "188  112918   2022-01-18  \n",
+            "192  118616   2021-10-05  >\n",
+            "    Employee ID           Name Department              Position  Salary  \\\n",
+            "1           102  Peter Higgins         IT               Manager   79660   \n",
+            "3           104    Bill Carter         IT               Analyst   53009   \n",
+            "13          114  Kristy Howell         IT  Sales Representative  108656   \n",
+            "14          115    Keith Mills         IT               Analyst   62049   \n",
+            "20          121   Connie Scott         IT             Developer  105205   \n",
+            "\n",
+            "   Joining Date  \n",
+            "1    2025-03-10  \n",
+            "3    2021-06-13  \n",
+            "13   2025-01-05  \n",
+            "14   2023-03-08  \n",
+            "20   2024-05-01  \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "d = df.loc[df.Department == 'IT']\n",
+        "d1=df.loc[1:10:2]\n",
+        "print(d1)\n",
+        "# print(d.head())\n",
+        "\n",
+        "df.loc[1:5, 'Name']\n",
+        "\n",
+        "\n",
+        "d = df.loc[df.Name== 'Brian Villa']\n",
+        "print(d['Employee ID'])\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EY1qaGbBjMuY",
+        "outputId": "c0f97d19-cb0a-404f-88aa-84c83183cec7"
+      },
+      "execution_count": 146,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   Employee ID               Name  Department              Position  Salary  \\\n",
+            "1          102      Peter Higgins          IT               Manager   79660   \n",
+            "3          104        Bill Carter          IT               Analyst   53009   \n",
+            "5          106  Heather Dickerson   Marketing               Manager   80210   \n",
+            "7          108          Roy Boyer  Operations             Executive  114461   \n",
+            "9          110        Brian Villa     Finance  Sales Representative   54577   \n",
+            "\n",
+            "  Joining Date  \n",
+            "1   2025-03-10  \n",
+            "3   2021-06-13  \n",
+            "5   2024-06-03  \n",
+            "7   2024-02-16  \n",
+            "9   2023-01-09  \n",
+            "9    110\n",
+            "Name: Employee ID, dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "# # Define the data and columns\n",
+        "# c = [\"a\", \"b\", \"c\"]\n",
+        "# data = [\"name\", \"employee\", \"salary\"]\n",
+        "\n",
+        "# # Create a DataFrame by passing the data as rows and the index as column labels\n",
+        "# df = pd.DataFrame(data, index=c, columns=[\"Values\"])\n",
+        "\n",
+        "# # Print the DataFrame\n",
+        "# print(df)\n",
+        "\n",
+        "\n",
+        "data={\"Name\":['ravi','suresh','Mani','kumar','rama','srinivas','Sathish'],\n",
+        "      \"salary\":['1000','2000','3000','5000','6000','7000','8000']}\n",
+        "c=[1,2,3,4,5,6,7]\n",
+        "df=pd.DataFrame(data,index=c)\n",
+        "print(df)\n",
+        "\n",
+        "df.to_excel('test.xlsx',index=True ,engine='openpyxl')\n",
+        "\n",
+        "print(df.apply(lambda x: x.max()))\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dfHT5F1-FVu2",
+        "outputId": "ef75f32f-f758-4cd1-bcbc-8064ed10bed4"
+      },
+      "execution_count": 204,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "       Name salary\n",
+            "1      ravi   1000\n",
+            "2    suresh   2000\n",
+            "3      Mani   3000\n",
+            "4     kumar   5000\n",
+            "5      rama   6000\n",
+            "6  srinivas   7000\n",
+            "7   Sathish   8000\n",
+            "Name      suresh\n",
+            "salary      8000\n",
+            "dtype: object\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "# Creating a DataFrame with multiple columns and rows\n",
+        "data = {\n",
+        "    'Name': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],\n",
+        "    'Age': [25, 30, 35, 40, 45],\n",
+        "    'Salary': [5000, 6000, 7000, 8000, 9000],\n",
+        "    'Department': ['HR', 'Finance', 'IT', 'Marketing', 'Finance']\n",
+        "}\n",
+        "\n",
+        "df = pd.DataFrame(data)\n",
+        "# print(df)\n",
+        "\n",
+        "\n",
+        "# # Get the maximum salary across all rows (column-wise)\n",
+        "# max_salary = df['Salary'].max()\n",
+        "# print(max_salary)  # Output: 9000\n",
+        "\n",
+        "\n",
+        "\n",
+        "# d=df.groupby('Department').max()\n",
+        "# print(d)\n",
+        "\n",
+        "# average_salary = df.groupby('Department')['Salary'].apply(lambda x: x.mean())\n",
+        "# print(average_salary)\n",
+        "\n",
+        "\n",
+        "# df['Average'] = df.apply(lambda row: (row['Age'] + row['Salary']) / 2, axis=1)\n",
+        "# print(df)\n",
+        "\n",
+        "\n",
+        "\n",
+        "# # Format the entire DataFrame to add a dollar sign to every value\n",
+        "# df_formatted = df.applymap(lambda x: f\"${x}\" if isinstance(x, (int, float)) else x)\n",
+        "# print(df_formatted)\n",
+        "\n",
+        "\n",
+        "# Create a dictionary to map full department names to abbreviations\n",
+        "department_map = {\n",
+        "    'HR': 'Human Resources',\n",
+        "    'Finance': 'Fin',\n",
+        "    'IT': 'Information Technology',\n",
+        "    'Marketing': 'Mktg'\n",
+        "}\n",
+        "\n",
+        "# Use map to replace department names with their abbreviations\n",
+        "df['Department Abbr'] = df['Department'].map(department_map)\n",
+        "print(df)\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QhejICukK9l_",
+        "outputId": "33daaf27-9b0a-4eb3-b8dc-e391c8112173"
+      },
+      "execution_count": 222,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "      Name  Age  Salary Department         Department Abbr\n",
+            "0    Alice   25    5000         HR         Human Resources\n",
+            "1      Bob   30    6000    Finance                     Fin\n",
+            "2  Charlie   35    7000         IT  Information Technology\n",
+            "3    David   40    8000  Marketing                    Mktg\n",
+            "4      Eva   45    9000    Finance                     Fin\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Concate, merge,and join\n",
+        "import pandas as pd\n",
+        "\n",
+        "# Creating the first DataFrame (df1)\n",
+        "df1 = pd.DataFrame(\n",
+        "    {\n",
+        "        \"A\": [\"A0\", \"A1\", \"A2\", \"A3\"],\n",
+        "        \"B\": [\"B0\", \"B1\", \"B2\", \"B3\"],\n",
+        "        \"C\": [\"C0\", \"C1\", \"C2\", \"C3\"],\n",
+        "        \"D\": [\"D0\", \"D1\", \"D2\", \"D3\"],\n",
+        "    },\n",
+        "    index=[0, 1, 2, 3]\n",
+        ")\n",
+        "\n",
+        "# Creating the second DataFrame (df2)\n",
+        "df2 = pd.DataFrame(\n",
+        "    {\n",
+        "        \"A\": [\"A4\", \"A5\", \"A6\", \"A7\"],\n",
+        "        \"B\": [\"B4\", \"B5\", \"B6\", \"B7\"],\n",
+        "        \"C\": [\"C4\", \"C5\", \"C6\", \"C7\"],\n",
+        "        \"D\": [\"D4\", \"D5\", \"D6\", \"D7\"],\n",
+        "    },\n",
+        "    index=[4, 5, 6, 7]\n",
+        ")\n",
+        "\n",
+        "# Creating the third DataFrame (df3)\n",
+        "df3 = pd.DataFrame(\n",
+        "    {\n",
+        "        \"A\": [\"A8\", \"A9\", \"A10\", \"A11\"],\n",
+        "        \"B\": [\"B8\", \"B9\", \"B10\", \"B11\"],\n",
+        "        \"C\": [\"C8\", \"C9\", \"C10\", \"C11\"],\n",
+        "        \"D\": [\"D8\", \"D9\", \"D10\", \"D11\"],\n",
+        "    },\n",
+        "    index=[8, 9, 10, 11]\n",
+        "    )\n",
+        "\n",
+        "\n",
+        "\n",
+        "# Concatenating the DataFrames into a list\n",
+        "frames = [df1, df2, df3]\n",
+        "\n",
+        "# Concatenating the DataFrames along rows (default axis=0)\n",
+        "result = pd.concat(frames)\n",
+        "\n",
+        "# Display the concatenated result\n",
+        "print(result)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "95ANQEjZNggU",
+        "outputId": "926803bf-0a2d-4074-df61-59edcd8e99d2"
+      },
+      "execution_count": 232,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "      A    B    C    D\n",
+            "0    A0   B0   C0   D0\n",
+            "1    A1   B1   C1   D1\n",
+            "2    A2   B2   C2   D2\n",
+            "3    A3   B3   C3   D3\n",
+            "4    A4   B4   C4   D4\n",
+            "5    A5   B5   C5   D5\n",
+            "6    A6   B6   C6   D6\n",
+            "7    A7   B7   C7   D7\n",
+            "8    A8   B8   C8   D8\n",
+            "9    A9   B9   C9   D9\n",
+            "10  A10  B10  C10  D10\n",
+            "11  A11  B11  C11  D11\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "bv2jo7Ycj83i"
+      },
+      "execution_count": 231,
+      "outputs": []
+    }
+  ]
+}
